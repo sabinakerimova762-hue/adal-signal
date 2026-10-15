@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ADAL SIGNAL — предложения, которые меняют</title>
+<style>
+:root{--green:#176b50;--dark:#17352d;--mint:#eaf4ed;--bg:#f7f9f7;--text:#20332b;--muted:#6b7b72;--line:#e0e8e2;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 Inter,Arial,sans-serif}button,input,select,textarea{font:inherit}button,a{cursor:pointer}a{color:inherit;text-decoration:none}.container{width:min(1080px,92%);margin:auto}.header{background:#fff;border-bottom:1px solid var(--line)}.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:.07em}.logo-mark{display:grid;place-items:center;background:var(--green);color:#fff;width:40px;height:40px;border-radius:12px;font-size:21px}.logo small{display:block;font-size:10px;color:var(--muted);letter-spacing:.12em}.navlinks{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:650;color:#4d6156}.navlinks a:hover{color:var(--green)}.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:12px 17px;border:0;border-radius:10px;font-weight:750}.primary{background:var(--green);color:white}.primary:hover{background:#10543f}.soft{background:var(--mint);color:var(--green);border:1px solid #d4e6d9}.hero{padding:64px 0 56px;background:linear-gradient(120deg,#f5faf6,#eaf4ed)}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}.eyebrow{display:inline-block;background:#dceee2;color:var(--green);font-weight:800;letter-spacing:.1em;font-size:11px;padding:7px 11px;border-radius:30px;text-transform:uppercase}.hero h1{font-size:clamp(38px,5.4vw,62px);line-height:1.06;letter-spacing:-.045em;margin:18px 0}.hero h1 span{color:var(--green)}.hero p{color:#5c6e63;font-size:17px;max-width:550px;margin:0 0 24px}.actions{display:flex;gap:10px;flex-wrap:wrap}.hint{font-size:12px!important;color:var(--muted)!important;margin-top:17px!important}.preview{background:var(--dark);color:white;border-radius:22px;padding:23px;box-shadow:0 20px 45px #17352d20}.preview-top{display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.08em;color:#d2e5d9;font-weight:800}.preview-label{font-size:22px;font-weight:800;line-height:1.25;margin:25px 0 16px}.example{background:white;color:var(--text);border-radius:13px;padding:14px;margin-top:10px}.example-head{display:flex;justify-content:space-between;gap:10px;font-size:13px;font-weight:750}.pill{background:#e5f3e9;color:var(--green);font-size:10px;border-radius:20px;padding:4px 7px;white-space:nowrap}.example p{font-size:12px;color:var(--muted);margin:6px 0 0}.section{padding:58px 0}.white{background:white}.section-title{max-width:650px;margin-bottom:25px}.kicker{font-size:11px;font-weight:850;letter-spacing:.13em;text-transform:uppercase;color:var(--green)}h2{font-size:clamp(27px,3.7vw,39px);letter-spacing:-.03em;line-height:1.15;margin:8px 0 10px}.section-title p{color:var(--muted);margin:0}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.feature{background:#fff;border:1px solid var(--line);border-radius:15px;padding:21px}.feature-icon{width:42px;height:42px;border-radius:12px;background:var(--mint);display:grid;place-items:center;font-size:21px;margin-bottom:13px}.feature h3{font-size:16px;margin:0 0 6px}.feature p{font-size:13px;color:var(--muted);margin:0}.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.step{border:1px solid var(--line);background:#fff;border-radius:14px;padding:18px}.number{width:30px;height:30px;display:grid;place-items:center;border-radius:9px;background:var(--green);color:#fff;font-weight:850;font-size:12px;margin-bottom:12px}.step strong{display:block;font-size:14px;margin-bottom:5px}.step p{font-size:12px;color:var(--muted);margin:0}.form-section{background:#f0f6f1}.form-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:22px;align-items:start}.side-note{background:var(--dark);color:white;border-radius:17px;padding:23px}.side-note h3{font-size:21px;line-height:1.25;margin:12px 0}.side-note p,.side-note li{font-size:13px;color:#d2e2d7}.side-note ul{padding-left:18px}.side-note .small-label{font-size:10px;font-weight:850;letter-spacing:.1em;color:#bde5cb}.card{background:white;border:1px solid var(--line);border-radius:17px;padding:24px;box-shadow:0 8px 25px #17352d08}.card h3{margin:0 0 5px;font-size:21px}.sub{font-size:13px;color:var(--muted);margin:0 0 20px}.field{margin-bottom:15px}.field label{display:block;font-size:12px;font-weight:800;margin-bottom:6px}.field input,.field select,.field textarea,.toolbar input,.toolbar select{width:100%;border:1px solid #d3dfd6;background:#fcfdfc;padding:11px 12px;border-radius:9px;outline:none;color:var(--text)}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px #176b5015}.field textarea{min-height:90px;resize:vertical}.field small{font-size:11px;color:var(--muted);display:block;margin-top:5px}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.consent{display:flex;gap:9px;align-items:flex-start;font-size:11px;color:var(--muted);margin:13px 0 18px}.consent input{margin-top:3px;accent-color:var(--green)}.notice{background:#fff7e5;border:1px solid #f0dfb5;color:#735b28;padding:11px 12px;border-radius:9px;font-size:11px;margin-top:15px}.success{display:none;background:#e9f6ed;border:1px solid #b9ddc5;border-radius:12px;padding:15px;margin-top:15px}.success strong{display:block;color:var(--green)}.code{font-weight:900;font-size:21px;letter-spacing:.1em;text-align:center;padding:10px;background:white;border:1px dashed #8bb89a;border-radius:8px;margin:10px 0}.lookup{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end}.result{display:none;margin-top:14px;border:1px solid var(--line);background:#fbfdfb;padding:15px;border-radius:11px;font-size:13px}.status{display:inline-block;background:#e7f4eb;color:var(--green);padding:5px 9px;border-radius:30px;font-size:11px;font-weight:800}.status.review{background:#fff0d5;color:#805b15}.status.done{background:#e8eefc;color:#34579c}.admin-intro{display:flex;justify-content:space-between;align-items:end;gap:15px;flex-wrap:wrap}.admin-login{max-width:460px}.admin-board{display:none}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin:18px 0}.stat{background:white;border:1px solid var(--line);padding:14px;border-radius:12px}.stat span{font-size:11px;color:var(--muted)}.stat strong{display:block;font-size:26px}.toolbar{display:flex;gap:9px;flex-wrap:wrap;margin:15px 0}.toolbar input{flex:1;min-width:180px}.toolbar select{width:auto;min-width:155px}.table-wrap{overflow:auto;background:white;border:1px solid var(--line);border-radius:12px}.table{width:100%;border-collapse:collapse;min-width:690px}.table th,.table td{text-align:left;padding:12px;border-bottom:1px solid #eaf0eb;font-size:12px;vertical-align:top}.table th{background:#f7faf7;color:#607168;font-size:10px;text-transform:uppercase;letter-spacing:.06em}.table select{max-width:160px;border:1px solid var(--line);border-radius:7px;padding:7px;background:white}.empty{text-align:center;color:var(--muted);padding:25px}.small{font-size:11px;color:var(--muted)}.footer{background:#112f27;color:#d2e5d9;padding:30px 0}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer p{font-size:12px;color:#a9c5b5;margin:5px 0 0}.toast{display:none;position:fixed;bottom:18px;right:18px;z-index:9;background:#17352d;color:white;padding:12px 16px;border-radius:10px;box-shadow:0 10px 30px #0002;font-size:13px}.hidden{display:none!important}
+@media(max-width:800px){.hero-grid,.form-layout{grid-template-columns:1fr}.three{grid-template-columns:1fr}.how-grid{grid-template-columns:1fr 1fr}.navlinks a:not(.nav-cta){display:none}.stats{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.hero{padding:43px 0}.hero h1{font-size:41px}.hero p{font-size:15px}.section{padding:43px 0}.how-grid,.two{grid-template-columns:1fr}.card{padding:18px}.nav{min-height:65px}.nav-cta{font-size:12px;padding:9px 11px}.lookup{grid-template-columns:1fr}.preview{padding:18px}}
+</style></head>
+<body>
+<header class="header"><div class="container nav">
+<a class="logo" href="#home"><span class="logo-mark">A</span><span>ADAL SIGNAL<small>ГОЛОС СТУДЕНТОВ</small></span></a>
+<nav class="navlinks"><a href="#about">О проекте</a><a href="#how">Как работает</a><a href="#status">Мой статус</a><a class="btn primary nav-cta" href="#send">Отправить сигнал</a></nav>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="container hero-grid"><div><span class="eyebrow">Честность начинается с диалога</span><h1>Предложи.<br><span>Измени к лучшему.</span></h1><p>ADAL SIGNAL — простое пространство для студенческих предложений, которые помогают делать жизнь колледжа прозрачнее и справедливее.</p><div class="actions"><a class="btn primary" href="#send">Оставить предложение →</a><a class="btn soft" href="#status">Проверить статус</a></div><p class="hint">Имя не публикуется. Не указывай имена других людей и личные данные в тексте.</p></div>
+<div class="preview"><div class="preview-top"><span>ADAL SIGNAL</span><span>ПОНЯТНЫЙ ПРОЦЕСС</span></div><div class="preview-label">От идеи —<br>к реальному улучшению</div><div class="example"><div class="example-head"><span>Понятные правила конкурсов</span><span class="pill">На рассмотрении</span></div><p>Публиковать критерии и сроки заранее, чтобы у всех были равные возможности.</p></div><div class="example"><div class="example-head"><span>Информация в одном месте</span><span class="pill">Получено</span></div><p>Собрать важные правила и возможности для студентов на одной странице.</p></div></div></div></section>
+<section class="section white" id="about"><div class="container"><div class="section-title"><span class="kicker">О проекте</span><h2>Меньше путаницы. Больше ясности.</h2><p>Один понятный путь: отправить предложение, сохранить код и узнать, на каком этапе оно находится.</p></div><div class="three">
+<div class="feature"><div class="feature-icon">✉</div><h3>Конфиденциальная подача</h3><p>Форма не запрашивает имя или телефон. После отправки появляется личный код обращения.</p></div>
+<div class="feature"><div class="feature-icon">✓</div><h3>Статус без лишних шагов</h3><p>Введи код и посмотри, принято ли обращение и что происходит дальше.</p></div>
+<div class="feature"><div class="feature-icon">↗</div><h3>Общие выводы</h3><p>Обезличенные данные помогают замечать темы, в которых можно улучшить процессы.</p></div>
+</div></div></section>
+<section class="section" id="how"><div class="container"><div class="section-title"><span class="kicker">Как это работает</span><h2>Всего четыре шага</h2><p>Платформа должна быть понятна студенту с первого посещения.</p></div><div class="how-grid">
+<div class="step"><div class="number">01</div><strong>Опиши ситуацию</strong><p>Выбери категорию и предложи улучшение.</p></div>
+<div class="step"><div class="number">02</div><strong>Сохрани код</strong><p>Код появится после отправки формы.</p></div>
+<div class="step"><div class="number">03</div><strong>Проверь статус</strong><p>Вернись на сайт и введи свой код.</p></div>
+<div class="step"><div class="number">04</div><strong>Следи за процессом</strong><p>Статус меняется по мере рассмотрения.</p></div>
+</div></div></section>
+<section class="section form-section" id="send"><div class="container"><div class="section-title"><span class="kicker">Твоя идея важна</span><h2>Отправить обращение</h2><p>Сообщи о проблеме, возможной коррупции, задай вопрос или предложи улучшение.</p></div><div class="form-layout">
+<aside class="side-note"><span class="small-label">ПЕРЕД ОТПРАВКОЙ</span><h3>Сообщи о ситуации</h3><p>Здесь можно оставить не только идею, но и обращение о проблеме в учебном заведении, в том числе о возможных коррупционных действиях.</p><ul><li>Опиши факты и обстоятельства, которые тебе известны.</li><li>Не указывай Ф. И. О. и контакты других людей.</li><li>Не отправляй пароли, документы и личные данные.</li><li>Не делай категоричных выводов, если обстоятельства ещё не проверены.</li></ul><div class="notice">Демо-версия: данные сохраняются только в этом браузере. Не отправляй реальные чувствительные сведения.</div></aside>
+<div class="card"><h3>Форма обращения</h3><p class="sub">Имя и телефон не нужны. Выбери вид обращения и опиши ситуацию.</p>
+<form id="feedbackForm">
+<div class="field"><label for="college">Тип учебного заведения *</label><select id="college" required><option value="">Выбери вариант</option><option>Колледж</option><option>Университет</option><option>Академия</option><option>Не указывать</option></select></div>
+<div class="field" id="institutionField" style="display:none"><label for="institution">Название учебного заведения *</label><input id="institution" maxlength="180" placeholder="Введи полное название колледжа, университета или академии"><p class="small">Название нужно, чтобы модератор понимал, к какому учреждению относится обращение. Имя заявителя не требуется.</p></div>
+<div class="field"><label for="kind">Вид обращения *</label><select id="kind" required>
+<option value="">Выбери, с чем обращаешься</option>
+<option>Сообщить о проблеме</option>
+<option>Сообщить о возможной коррупции</option>
+<option>Сообщить о несправедливом отношении</option>
+<option>Проблема с оцениванием или экзаменом</option>
+<option>Проблема с оплатой или дополнительными сборами</option>
+<option>Проблема с расписанием или организацией обучения</option>
+<option>Проблема с условиями обучения</option>
+<option>Нарушение правил или процедуры</option>
+<option>Задать вопрос</option>
+<option>Предложить улучшение</option>
+<option>Поблагодарить или отметить хорошую практику</option>
+<option>Другое</option>
+</select></div>
+<div class="field"><label for="category">Тема обращения *</label><select id="category" required>
+<option value="">Выбери тему</option>
+<option>Возможная коррупция или конфликт интересов</option>
+<option>Вымогательство денег или подарков</option>
+<option>Непрозрачные сборы или платежи</option>
+<option>Нечестный или непонятный порядок оценивания</option>
+<option>Поступление, перевод или зачисление</option>
+<option>Стипендия, грант или материальная помощь</option>
+<option>Практика, стажировка или распределение</option>
+<option>Доступ к учебным материалам и информации</option>
+<option>Расписание, пары или организация занятий</option>
+<option>Состояние аудиторий и оборудование</option>
+<option>Безопасность и доступность учебной среды</option>
+<option>Уважительное отношение и этика общения</option>
+<option>Давление или несправедливое отношение</option>
+<option>Правила, процедуры и сроки</option>
+<option>Студенческое самоуправление и инициативы</option>
+<option>Общежитие и бытовые условия</option>
+<option>Цифровые сервисы и связь с администрацией</option>
+<option>Идея по улучшению жизни студентов</option>
+<option>Другое</option>
+</select></div>
+<div class="field"><label for="title">Коротко назови обращение *</label><input id="title" maxlength="100" required placeholder="Например: Просят оплату без объяснения основания"></div>
+<div class="field"><label for="details">Опиши проблему или ситуацию *</label><textarea id="details" maxlength="1600" minlength="10" required placeholder="Что произошло? Где и примерно когда? Что именно вызывает вопрос? Пиши только то, что тебе известно." ></textarea><small>Минимум 10 символов. Не указывай имена и личные данные других людей.</small></div>
+<div class="field" id="suggestionField"><label for="suggestion">Что, по твоему мнению, стоит сделать? <span id="suggestionOptional">(необязательно)</span></label><textarea id="suggestion" maxlength="800" placeholder="Если хочешь, предложи возможный способ решения. Для сообщения о проблеме это поле можно оставить пустым."></textarea></div>
+<label class="consent"><input type="checkbox" id="agree" required><span>Я понимаю, что это демонстрационная версия, и не отправляю личные или чувствительные данные.</span></label>
+<button class="btn primary" id="submitBtn" type="submit">Отправить обращение →</button>
+<p class="small" id="submitHelp">После отправки появится код обращения. Сохрани его, чтобы проверить статус.</p>
+</form><div class="success" id="successBox"><strong>Готово! Обращение принято в демо-версии.</strong><span class="small">Скопируй код обращения. Вставь его в разделе «Мой статус», чтобы проверить состояние обращения.</span><div class="code" id="newCode"></div><button class="btn soft" id="copyCode" type="button">Скопировать код</button></div>
+</div></div></div></section>
+<section class="section white" id="status"><div class="container"><div class="section-title"><span class="kicker">Проверка статуса</span><h2>Найти своё обращение</h2><p>Введи код, который появился после отправки предложения.</p></div><div class="card" style="max-width:700px"><form id="lookupForm"><div class="lookup"><div class="field" style="margin:0"><label for="lookupCode">Код обращения</label><input id="lookupCode" required placeholder="AS-XXXXXXXX"></div><button class="btn primary" type="submit">Проверить</button></div></form><div class="result" id="statusResult"></div><p class="small">В текущей демо-версии код работает на том же устройстве и в том же браузере.</p></div></div></section>
+<section class="section" id="moderator"><div class="container"><div class="section-title"><span class="kicker">Для демонстрации</span><h2>Кабинет модератора</h2><p>Здесь можно просмотреть тестовые обращения и изменить их статус.</p></div>
+<div class="card admin-login" id="adminLogin"><h3>Вход в кабинет</h3><p class="sub">Демо-пароль: <strong>AdalDemo2026!</strong></p><form id="loginForm"><div class="field"><label for="adminPassword">Пароль модератора</label><input id="adminPassword" type="password" required placeholder="Введите демо-пароль"></div><button class="btn primary" type="submit">Войти</button></form><p class="small">Пароль только для демонстрации. Для реальных обращений необходима серверная авторизация.</p></div>
+<div class="admin-board" id="adminBoard"><div class="admin-intro"><div><h3 style="margin:0">Обращения</h3><p class="small">Только демонстрационные данные</p></div><button class="btn soft" id="logoutBtn">Выйти</button></div><div class="stats"><div class="stat"><span>Всего</span><strong id="statTotal">0</strong></div><div class="stat"><span>Получено</span><strong id="statNew">0</strong></div><div class="stat"><span>В работе</span><strong id="statReview">0</strong></div><div class="stat"><span>Завершено</span><strong id="statDone">0</strong></div></div>
+<div class="toolbar"><input id="adminSearch" placeholder="Поиск по коду или заголовку"><select id="adminFilter"><option value="">Все статусы</option><option>Получено</option><option>На проверке</option><option>На рассмотрении</option><option>Решение принято</option><option>Завершено</option></select><button class="btn soft" id="seedBtn" type="button">Добавить примеры</button><button class="btn soft" id="exportBtn" type="button">Скачать CSV</button></div>
+<div class="table-wrap"><table class="table"><thead><tr><th>Код / дата</th><th>Обращение</th><th>Учебное заведение</th><th>Статус</th></tr></thead><tbody id="adminRows"></tbody></table><div class="empty hidden" id="adminEmpty">Обращений пока нет. Добавь демо-примеры или отправь тестовую форму.</div></div><p class="small">Все демонстрационные примеры вымышлены. Не используйте эту версию для хранения реальных обращений.</p></div>
+</div></section>
+</main>
+<footer class="footer"><div class="container footer-row"><div><strong>ADAL SIGNAL</strong><p>Предложения, которые помогают менять к лучшему.</p></div><div><strong>ADAL URPAQ 2026</strong><p>Концепция молодёжного IT-проекта.</p></div></div></footer>
+<div class="toast" id="toast"></div>
+<script>
+const KEY='adal_signal_clean_demo_v2',statuses=['Получено','На проверке','На рассмотрении','Решение принято','Завершено'];let lastCode='';
+function items(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return []}}function save(a){localStorage.setItem(KEY,JSON.stringify(a));}
+function code(){let a=new Uint8Array(4);if(window.crypto&&crypto.getRandomValues)crypto.getRandomValues(a);else for(let i=0;i<4;i++)a[i]=Math.floor(Math.random()*256);return 'AS-'+Array.from(a).map(n=>n.toString(16).padStart(2,'0')).join('').toUpperCase()}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function toast(s){let t=document.getElementById('toast');t.textContent=s;t.style.display='block';setTimeout(()=>t.style.display='none',2600)}
+function date(s){return new Date(s).toLocaleDateString('ru-RU')}
+function cls(s){return ['На проверке','На рассмотрении'].includes(s)?'review':['Решение принято','Завершено'].includes(s)?'done':''}
+document.getElementById('college').addEventListener('change',()=>{const type=document.getElementById('college').value,field=document.getElementById('institutionField'),input=document.getElementById('institution'),needs=type!==''&&type!=='Не указывать';field.style.display=needs?'block':'none';input.required=needs;if(!needs)input.value='';});
+const kindSelect=document.getElementById('kind');
+kindSelect.addEventListener('change',()=>{
+ const isProposal=kindSelect.value==='Предложить улучшение';
+ document.getElementById('suggestionOptional').textContent=isProposal?'(можно описать идею здесь)':'(необязательно)';
+ document.getElementById('suggestion').placeholder=isProposal?'Опиши конкретное улучшение, которое предлагаешь.':'Если хочешь, напиши, какое решение могло бы помочь. Это поле необязательно.';
+ document.getElementById('submitBtn').textContent=isProposal?'Отправить предложение →':'Отправить обращение →';
+});
+document.getElementById('feedbackForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ const form=e.currentTarget;
+ if(!form.reportValidity()) { toast('Проверь обязательные поля формы.'); return; }
+ const d=document.getElementById('details').value.trim();
+ const title=document.getElementById('title').value.trim();
+ const suggestion=document.getElementById('suggestion').value.trim();
+ const college=document.getElementById('college').value;
+ const institution=document.getElementById('institution').value.trim();
+ if(d.length<10){toast('Опиши ситуацию чуть подробнее — минимум 10 символов.');document.getElementById('details').focus();return;}
+ if(college!=='Не указывать'&&!institution){toast('Укажи название учебного заведения.');document.getElementById('institution').focus();return;}
+ const submitBtn=document.getElementById('submitBtn');
+ submitBtn.disabled=true; submitBtn.textContent='Сохраняем обращение…';
+ try {
+   const all=items();
+   let x={code:code(),createdAt:new Date().toISOString(),college,institution,category:document.getElementById('category').value,kind:document.getElementById('kind').value,title,details:d,suggestion,status:'Получено'};
+   all.unshift(x);
+   save(all);
+   const verify=items().find(i=>i.code===x.code);
+   if(!verify) throw new Error('localStorage verification failed');
+   lastCode=x.code;
+   document.getElementById('newCode').textContent=x.code;
+   document.getElementById('successBox').style.display='block';
+   document.getElementById('successBox').scrollIntoView({behavior:'smooth',block:'center'});
+   form.reset();
+   document.getElementById('institutionField').style.display='none';
+   document.getElementById('institution').required=false;
+   document.getElementById('suggestionOptional').textContent='(необязательно)';
+   document.getElementById('suggestion').placeholder='Если хочешь, предложи возможный способ решения. Для сообщения о проблеме это поле можно оставить пустым.';
+   document.getElementById('submitBtn').textContent='Отправить обращение →';
+   toast('Обращение сохранено. Твой код: '+x.code);
+   if(document.getElementById('adminBoard').style.display==='block') render();
+ } catch(err) {
+   console.error(err);
+   toast('Браузер не разрешил сохранить обращение. Открой сайт в Chrome/Edge и попробуй ещё раз.');
+ } finally {
+   submitBtn.disabled=false;
+ }
+});
+document.getElementById('copyCode').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(lastCode);toast('Код скопирован')}catch(e){toast('Твой код: '+lastCode)}});
+document.getElementById('lookupForm').addEventListener('submit',e=>{e.preventDefault();let c=document.getElementById('lookupCode').value.trim().toUpperCase(),x=items().find(i=>i.code===c),r=document.getElementById('statusResult');r.style.display='block';if(!x){r.innerHTML='<strong>Обращение не найдено</strong><p>Проверь код и попробуй снова. В демо-версии данные доступны в исходном браузере.</p>';return}r.innerHTML=`<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><strong>${esc(x.title)}</strong><span class="status ${cls(x.status)}">${esc(x.status)}</span></div><p class="small">Код: ${esc(x.code)} · Отправлено: ${date(x.createdAt)}</p><p><strong>Учебное заведение:</strong> ${esc(x.institution||x.college||'Не указано')}</p><p><strong>Тема:</strong> ${esc(x.category)}</p>`});
+document.getElementById('loginForm').addEventListener('submit',e=>{e.preventDefault();if(document.getElementById('adminPassword').value==='AdalDemo2026!'){document.getElementById('adminLogin').style.display='none';document.getElementById('adminBoard').style.display='block';render();toast('Демо-кабинет открыт')}else toast('Неверный пароль')});
+document.getElementById('logoutBtn').addEventListener('click',()=>{document.getElementById('adminBoard').style.display='none';document.getElementById('adminLogin').style.display='block';document.getElementById('adminPassword').value=''});
+document.getElementById('adminSearch').addEventListener('input',render);document.getElementById('adminFilter').addEventListener('change',render);
+function render(){let a=items(),q=(document.getElementById('adminSearch').value||'').toLowerCase(),f=document.getElementById('adminFilter').value;document.getElementById('statTotal').textContent=a.length;document.getElementById('statNew').textContent=a.filter(x=>x.status==='Получено').length;document.getElementById('statReview').textContent=a.filter(x=>['На проверке','На рассмотрении'].includes(x.status)).length;document.getElementById('statDone').textContent=a.filter(x=>x.status==='Завершено').length;let shown=a.filter(x=>(!f||x.status===f)&&(`${x.code} ${x.title} ${x.category} ${x.institution||""} ${x.details||""}`).toLowerCase().includes(q));document.getElementById('adminRows').innerHTML=shown.map(x=>`<tr><td><strong>${esc(x.code)}</strong><br><span class="small">${date(x.createdAt)}</span></td><td><strong>${esc(x.title)}</strong><br><span class="small">${esc(x.category)} · ${esc(x.kind)}</span><details style="margin-top:6px"><summary>Описание и решение</summary><p>${esc(x.details)}</p><p><strong>Предложение:</strong> ${esc(x.suggestion)}</p></details></td><td><strong>${esc(x.institution||x.college||'Не указано')}</strong><br><span class="small">${esc(x.college||'Тип не указан')}</span></td><td><select aria-label="Изменить статус" onchange="setStatus('${esc(x.code)}',this.value)">${statuses.map(s=>`<option ${s===x.status?'selected':''}>${s}</option>`).join('')}</select></td></tr>`).join('');document.getElementById('adminEmpty').classList.toggle('hidden',shown.length>0)}
+function setStatus(c,s){let a=items(),i=a.findIndex(x=>x.code===c);if(i>=0){a[i].status=s;a[i].updatedAt=new Date().toISOString();save(a);render();toast('Статус обновлён')}}
+document.getElementById('seedBtn').addEventListener('click',()=>{let a=items();if(a.some(x=>x.demo)){toast('Примеры уже добавлены');return}let ex=[['Прозрачность правил','Публиковать критерии конкурсов заранее','Публиковать правила, сроки и критерии отбора в одном месте.'],['Доступ к информации','Собрать правила для студентов','Создать страницу со ссылками на основные правила и возможности.'],['Равные возможности','Объяснять порядок отбора','Заранее публиковать порядок отбора и единые критерии.']];ex.forEach((v,i)=>a.push({code:code(),createdAt:new Date(Date.now()-(i+1)*86400000).toISOString(),college:'Колледж',category:v[0],kind:'Предложение',title:v[1],details:'Демонстрационный пример обращения. Это вымышленные данные для показа интерфейса.',suggestion:v[2],status:statuses[i],demo:true}));save(a);render();toast('Добавлены вымышленные примеры')});
+document.getElementById('exportBtn').addEventListener('click',()=>{let a=items();if(!a.length){toast('Нет данных для экспорта');return}let keys=['code','createdAt','college','institution','category','kind','title','details','suggestion','status'];let csv=[keys.join(';'),...a.map(x=>keys.map(k=>'"'+String(x[k]||'').replace(/"/g,'""').replace(/\n/g,' ')+'"').join(';'))].join('\r\n'),blob=new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),el=document.createElement('a');el.href=url;el.download='adal-signal-demo.csv';el.click();URL.revokeObjectURL(url)});
+</script></body></html>
